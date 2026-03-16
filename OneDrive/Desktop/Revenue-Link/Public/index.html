@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Link </title>
+</head>
+<body>
+    <div class="dashboard-container" style="padding: 20px; font-family: sans-serif; background: #f4f7f6;">
+    
+    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+        <div style="flex: 1; background: white; padding: 15px; border-radius: 10px; border-left: 5px solid #28a745; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <p style="color: #666; font-size: 12px; margin: 0;">Total Market Revenue (Today)</p>
+            <h2 style="margin: 5px 0; color: #333;">₦1,240,500</h2>
+            <p style="color: #28a745; font-size: 11px; margin: 0;">↑ 12% increase from yesterday</p>
+        </div>
+        <div style="flex: 1; background: white; padding: 15px; border-radius: 10px; border-left: 5px solid #007bff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <p style="color: #666; font-size: 12px; margin: 0;">Infrastructure Fund (Allocation)</p>
+            <h2 style="margin: 5px 0; color: #333;">₦372,150</h2>
+            <div style="background: #eee; height: 8px; border-radius: 4px; margin-top: 5px;">
+                <div style="background: #007bff; width: 65%; height: 100%; border-radius: 4px;"></div>
+            </div>
+            <p style="color: #666; font-size: 10px; margin-top: 5px;">Goal: Market Road Grading</p>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <input type="text" placeholder="Search Trader ID or Stall No..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+    </div>
+<button style="width: 100%; background: #333; color: white; border: none; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; cursor: pointer;">
+    🔍 SCAN AGENT / VERIFY RECEIPT
+</button>
+    <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead style="background: #333; color: white;">
+                <tr>
+                    <th style="padding: 12px; font-size: 13px;">Trader Info</th>
+                    <th style="padding: 12px; font-size: 13px;">Compliance Score</th>
+                    <th style="padding: 12px; font-size: 13px;">Status</th>
+                </tr>
+            </thead>
+            <tbody style="background: white;">
+    <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">
+            <span style="font-weight: bold; display: block;">M. Okoro</span>
+            <small style="color: #888;">Stall: A-102 (Food) | Balogun Market</small>
+        </td>
+        <td style="padding: 12px; text-align: center;">
+            <div style="background: #f0f0f0; padding: 5px; display: inline-block; border-radius: 4px;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=40x40&data=VERIFIED-OKORO-LGA774" alt="QR" style="display: block;">
+            </div>
+            <small style="display: block; font-size: 9px; color: #28a745;">SECURE ID</small>
+        </td>
+        <td style="padding: 12px;">
+            <span style="background: #e8f5e9; color: #2e7d32; padding: 5px 10px; border-radius: 20px; font-size: 11px; font-weight: bold;">VERIFIED PAID</span>
+        </td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 12px;">
+            <span style="font-weight: bold; display: block;">A. Abubakar</span>
+            <small style="color: #888;">Stall: B-44 (Textile) | Wuse Market</small>
+        </td>
+        <td style="padding: 12px; text-align: center;">
+            <span style="color: #888; font-size: 10px;">No Digital ID</span>
+        </td>
+        <td style="padding: 12px;">
+            <span style="background: #fff3e0; color: #ef6c00; padding: 5px 10px; border-radius: 20px; font-size: 11px; font-weight: bold;">UNAUTHORIZED</span>
+        </td>
+    </tr>
+</tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 20px; background: linear-gradient(90deg, #007bff, #0056b3); color: white; padding: 15px; border-radius: 10px; text-align: center;">
+        <p style="margin: 0; font-size: 13px;">Verified Traders: <strong>482</strong></p>
+        <p style="margin: 5px 0 0; font-size: 11px; opacity: 0.9;">System linked to Small Business Micro-Credit Scheme</p>
+    </div>
+</div>
+
+<script>
+function startDemo() {
+    const btn = document.querySelector('button');
+    btn.innerText = "⌛ SCANNING SECURE ID...";
+    btn.style.background = "#ffa000";
+
+    setTimeout(() => {
+        alert("✅ SUCCESS: Official Agent Verified (ID: LGA-774-99)");
+        btn.innerText = "🔍 SCAN AGENT / VERIFY RECEIPT";
+        btn.style.background = "#333";
+        
+        const rows = document.querySelectorAll('tbody tr');
+        const abubakarRow = rows[1]; 
+
+        // Update with Secure ID and Verified Status
+        abubakarRow.cells[1].innerHTML = `
+            <div style="background: #f0f0f0; padding: 5px; display: inline-block; border-radius: 4px;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=40x40&data=VERIFIED-ABUBAKAR" style="display: block;">
+            </div>
+            <small style="display: block; font-size: 9px; color: #28a745;">SECURE ID</small>
+        `;
+
+        abubakarRow.cells[2].innerHTML = `
+            <span style="background: #e8f5e9; color: #2e7d32; padding: 5px 10px; border-radius: 20px; font-size: 11px; font-weight: bold;">VERIFIED PAID</span>
+        `;
+    }, 2000);
+}
+document.querySelector('button').onclick = startDemo;
+</script>
+</body>
+</html>

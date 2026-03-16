@@ -1,0 +1,12 @@
+{
+  "market_stats": {
+    "daily_total": 1240500,
+    "infra_allocation": 372150,
+    "active_traders": 482
+  },
+  "traders": [
+    { "id": "TRD-001", "name": "M. Okoro", "stall": "A-102", "status": "Paid", "compliance": 98 },
+    { "id": "TRD-002", "name": "A. Abubakar", "stall": "B-44", "status": "Pending", "compliance": 72 },
+    { "id": "TRD-003", "name": "Mrs. Effiong", "stall": "C-12", "status": "Paid", "compliance": 100 }
+  ]
+}
