@@ -2,14 +2,14 @@
 import React, { useState } from 'react';
 
 export default function RevenueLinkMVP() {
-  // --- 1. STATE (Translating your HTML data to React) ---
+  
   const [isScanning, setIsScanning] = useState(false);
   const [traders, setTraders] = useState([
     { id: 1, name: "M. Okoro", stall: "A-102 (Food)", market: "Balogun Market", status: "VERIFIED PAID", hasId: true },
     { id: 2, name: "A. Abubakar", stall: "B-44 (Textile)", market: "Wuse Market", status: "UNAUTHORIZED", hasId: false },
   ]);
 
-  // --- 2. LOGIC (Your startDemo function) ---
+  
   const handleScan = () => {
     setIsScanning(true);
     
@@ -17,7 +17,6 @@ export default function RevenueLinkMVP() {
       alert("✅ SUCCESS: Official Agent Verified (ID: LGA-774-99)");
       setIsScanning(false);
       
-      // Update Abubakar's status just like your original script did
       setTraders(prev => prev.map(trader => 
         trader.name === "A. Abubakar" 
           ? { ...trader, status: "VERIFIED PAID", hasId: true } 
