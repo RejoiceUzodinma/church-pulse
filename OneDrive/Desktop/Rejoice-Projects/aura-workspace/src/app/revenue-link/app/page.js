@@ -2,14 +2,14 @@
 import React, { useState } from 'react';
 
 export default function RevenueLinkMVP() {
-  
+  // --- 1. STATE (Translating your HTML data to React) ---
   const [isScanning, setIsScanning] = useState(false);
   const [traders, setTraders] = useState([
     { id: 1, name: "M. Okoro", stall: "A-102 (Food)", market: "Balogun Market", status: "VERIFIED PAID", hasId: true },
     { id: 2, name: "A. Abubakar", stall: "B-44 (Textile)", market: "Wuse Market", status: "UNAUTHORIZED", hasId: false },
   ]);
 
-
+  // --- 2. LOGIC (Your startDemo function) ---
   const handleScan = () => {
     setIsScanning(true);
     
