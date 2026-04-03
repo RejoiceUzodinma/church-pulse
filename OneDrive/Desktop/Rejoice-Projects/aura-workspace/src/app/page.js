@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
- // --- import { usePaystackPayment } from 'react-paystack';
+ import { usePaystackPayment } from 'react-paystack';
 
 export default function VouchTerminal() {
   // --- 1. STATE MANAGEMENT ---
@@ -24,9 +24,9 @@ export default function VouchTerminal() {
     publicKey: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "pk_test_32d9688069bf62e4fc4f01d5c1066b9b4d311126",
   };
 
-  /*
+  
   const initializePayment = usePaystackPayment(config);
-*/
+
   const onSuccess = (reference) => {
     console.log("Payment Successful!", reference);
     setIsGenerated(true); 
