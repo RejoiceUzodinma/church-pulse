@@ -101,7 +101,7 @@ export default function AttendanceForm() {
           <p className="text-[10px] font-black tracking-[0.3em] text-slate-400 mb-2">RCCG RHEMA ASSEMBLY PARISH</p>
           <h2 className="text-4xl font-black tracking-tighter uppercase">RhemaPulse</h2>
           <div className="mt-6 flex items-center gap-4">
-             <a href="/" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-[10px] font-bold transition-all">
+             <a href="/dashboard" className="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-[10px] font-bold transition-all">
                 ← ANALYTICS HUB
              </a>
           </div>
